@@ -7,14 +7,93 @@
   --Strong-Cyan: hsl(172, 67%, 45%);
   --Very-Dark-Cyan: hsl(183, 100%, 15%);
   --Dark-Grayish-Cyan: hsl(186, 14%, 43%);
-  --Dark-Grayish-Cyan: hsl(184, 14%, 56%);
+  --Darkish-Grayish-Cyan: hsl(184, 14%, 56%);
   --Light-Grayish-Cyan: hsl(185, 41%, 84%);
-  --Light-Grayish-Cyan: hsl(189, 41%, 97%);
+  --Lightish-Grayish-Cyan: hsl(189, 41%, 97%);
   --White: hsl(0, 0%, 100%);
 }
+
 body {
-  margin: 20% 5%;
+  margin: 10% 0% 0%;
   font-size: 15px;
-  font-family: "Spartan", sans-serif;
+  font-family: "space-mono", sans-serif;
+  background-color: var(--Light-Grayish-Cyan);
+}
+
+.splitter {
+  text-transform: bold;
+  color: var(--Very-Dark-Cyan);
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 100px;
+  letter-spacing: 10px;
+}
+
+.card {
+  width: 100%;
   background-color: var(--White);
+  border-radius: 30px;
+  margin: 0 auto;
+}
+.data-card {
+  padding: 30px;
+}
+
+.head-text {
+  font-weight: 700;
+  font-size: large;
+  color: var(--Dark-Grayish-Cyan);
+  margin-bottom: 10px;
+}
+
+.input-text {
+  background-color: var(--Lightish-Grayish-Cyan);
+  width: 100%;
+  height: 48px;
+  display: flex;
+  align-items: center;
+}
+
+.input-text > span {
+  padding: 10px;
+  font-size: 1.5rem;
+  color: var(--Darkish-Grayish-Cyan);
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.input-text > input[type="number"] {
+  border: none;
+  background-color: var(--Lightish-Grayish-Cyan);
+  font-size: 1.5rem;
+  color: var(--Dark-Grayish-Cyan);
+  text-align: right;
+  width: 100%;
+  padding-right: 10px;
+}
+
+.input-text > input[type="number"]:focus-visible {
+  outline: none;
+}
+
+@media only screen and (min-width: 375px) {
+  body {
+    margin: 10% 5%;
+  }
+
+  .card {
+    width: 70%;
+    height: 500px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    display: flex;
+  }
 }

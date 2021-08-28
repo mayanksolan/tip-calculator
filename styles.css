@@ -16,7 +16,7 @@
 body {
   margin: 10% 0% 0%;
   font-size: 15px;
-  font-family: "space-mono", sans-serif;
+  font-family: "Space Mono", monospace;
   background-color: var(--Light-Grayish-Cyan);
 }
 
@@ -25,15 +25,17 @@ body {
   color: var(--Very-Dark-Cyan);
   font-size: 2rem;
   text-align: center;
-  margin-bottom: 100px;
+  margin-bottom: 50px;
   letter-spacing: 10px;
 }
 
 .card {
   width: 100%;
   background-color: var(--White);
-  border-radius: 30px;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
   margin: 0 auto;
+  padding-bottom: 30px;
 }
 .data-card {
   padding: 30px;
@@ -75,7 +77,8 @@ input[type="number"] {
   -moz-appearance: textfield;
 }
 
-.input-text > input[type="number"] {
+.input-text > input[type="number"],
+.custom-text > input[type="number"] {
   border: none;
   background-color: var(--Lightish-Grayish-Cyan);
   font-size: 1.5rem;
@@ -85,7 +88,8 @@ input[type="number"] {
   padding-right: 10px;
 }
 
-.input-text > input[type="number"]:focus-visible {
+.input-text > input[type="number"]:focus-visible,
+.custom-text > input[type="number"]:focus-visible {
   outline: none;
 }
 
@@ -106,9 +110,87 @@ input[type="number"] {
   align-items: center;
   color: var(--White);
   font-size: 1.5rem;
+  border: none;
+  cursor: pointer;
 }
 
-@media only screen and (min-width: 375px) {
+.tip-box:hover,
+.tip-box:active {
+  background-color: var(--Strong-Cyan);
+  color: var(--Very-Dark-Cyan);
+}
+
+.custom-text {
+  background-color: var(--Lightish-Grayish-Cyan);
+  width: 47.5%;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  color: var(--Very-Dark-Cyan);
+}
+
+.result-card {
+  width: 90%;
+  margin: 0 auto;
+  background-color: var(--Very-Dark-Cyan);
+  border-radius: 20px;
+}
+
+.result-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 40px 20px 0px;
+}
+
+.left {
+  display: flex;
+  flex-direction: column;
+  font-weight: bold;
+}
+
+.item-type {
+  color: var(--White);
+  padding-bottom: 5px;
+  font-size: 1.3rem;
+}
+
+.item-per {
+  color: var(--Dark-Grayish-Cyan);
+}
+
+.right {
+  color: var(--Strong-Cyan);
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.reset-button {
+  padding: 10% 0 10%;
+}
+
+.reset-box {
+  background-color: var(--Dark-Grayish-Cyan);
+  width: 90%;
+  margin: 0 auto;
+  border-radius: 5px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--Very-Dark-Cyan);
+  font-size: 1.2rem;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.reset-box:hover,
+.reset-box:active {
+  background-color: var(--Strong-Cyan);
+  color: var(--Very-Dark-Cyan);
+}
+
+@media only screen and (min-width: 376px) {
   body {
     margin: 10% 5%;
   }
@@ -116,8 +198,24 @@ input[type="number"] {
   .card {
     width: 70%;
     height: 500px;
-    border-bottom-left-radius: 0px;
-    border-bottom-right-radius: 0px;
+    border-radius: 30px;
     display: flex;
+    padding-bottom: 0px;
+  }
+
+  .data-card {
+    width: 90%;
+  }
+
+  .result-card {
+    margin: 3% 3% 3% 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .tip-box,
+  .custom-text {
+    width: 30%;
   }
 }

@@ -19,20 +19,49 @@
       <div class="data-card">
         <div class="bill">
           <div class="head-text">Bill</div>
-          <div class="input-text"><span>$</span><input type="number" name="" id="" placeholder="0" /></div>
+          <div class="input-text">
+            <span><img src="./images/icon-dollar.svg" /></span><input type="number" name="" id="" placeholder="0" />
+          </div>
         </div>
         <div class="bill">
           <div class="head-text">Select Tip %</div>
           <div class="tip-big-box">
-            <div class="tip-box">5%</div>
-            <div class="tip-box">10%</div>
-            <div class="tip-box">15%</div>
-            <div class="tip-box">25%</div>
-            <div class="tip-box">50%</div>
+            <button class="tip-box">5%</button>
+            <button class="tip-box">10%</button>
+            <button class="tip-box">15%</button>
+            <button class="tip-box">25%</button>
+            <button class="tip-box">50%</button>
+            <div class="custom-text"><input type="number" name="" id="" placeholder="Custom" /></div>
+          </div>
+        </div>
+        <div class="bill">
+          <div class="head-text">Number of people</div>
+          <div class="input-text">
+            <span><img src="./images/icon-person.svg" /></span><input type="number" name="" id="" placeholder="0" />
           </div>
         </div>
       </div>
-      <div class="result-card"></div>
+      <div class="result-card">
+        <div>
+          <div class="result-item">
+            <div class="left">
+              <div class="item-type">Tip Amount</div>
+              <div class="item-per">/ person</div>
+            </div>
+            <div class="right"><span class="symbol">$</span><span class="text">0.00</span></div>
+          </div>
+          <div class="result-item">
+            <div class="left">
+              <div class="item-type">Total</div>
+              <div class="item-per">/ person</div>
+            </div>
+            <div class="right"><span class="symbol">$</span><span class="text">0.00</span></div>
+          </div>
+        </div>
+        <div>
+          <div class="reset-button"><button class="reset-box">RESET</button></div>
+        </div>
+      </div>
     </div>
   </body>
 </html>

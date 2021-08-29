@@ -19,26 +19,28 @@
       <div class="data-card">
         <div class="bill">
           <div class="head-text">Bill</div>
+
           <div class="input-text">
-            <span><img src="./images/icon-dollar.svg" /></span><input type="number" name="" id="" placeholder="0" />
+            <span><img src="./images/icon-dollar.svg" /></span><input type="number" id="billValue" placeholder="0" value="0" onBlur="setBillValue()" />
           </div>
         </div>
         <div class="bill">
           <div class="head-text">Select Tip %</div>
           <div class="tip-big-box">
-            <button class="tip-box">5%</button>
-            <button class="tip-box">10%</button>
-            <button class="tip-box">15%</button>
-            <button class="tip-box">25%</button>
-            <button class="tip-box">50%</button>
-            <div class="custom-text"><input type="number" name="" id="" placeholder="Custom" /></div>
+            <button class="tip-box" id="five">5%</button>
+            <button class="tip-box" id="ten">10%</button>
+            <button class="tip-box" id="fifteen">15%</button>
+            <button class="tip-box" id="twentyfive">25%</button>
+            <button class="tip-box" id="fifty">50%</button>
+            <div class="custom-text"><input type="number" id="customTip" placeholder="Custom" value="0" onBlur="setCustomTip()" /></div>
           </div>
         </div>
         <div class="bill">
           <div class="head-text">Number of people</div>
           <div class="input-text">
-            <span><img src="./images/icon-person.svg" /></span><input type="number" name="" id="" placeholder="0" />
+            <span><img src="./images/icon-person.svg" /></span><input type="number" id="peopleCount" placeholder="0" onBlur="setPeopleCount()" />
           </div>
+          <div id="error">Can't be empty</div>
         </div>
       </div>
       <div class="result-card">
@@ -48,20 +50,21 @@
               <div class="item-type">Tip Amount</div>
               <div class="item-per">/ person</div>
             </div>
-            <div class="right"><span class="symbol">$</span><span class="text">0.00</span></div>
+            <div class="right"><span class="symbol">$</span><span class="text" id="tip-amount-id">0</span></div>
           </div>
           <div class="result-item">
             <div class="left">
               <div class="item-type">Total</div>
               <div class="item-per">/ person</div>
             </div>
-            <div class="right"><span class="symbol">$</span><span class="text">0.00</span></div>
+            <div class="right"><span class="symbol">$</span><span class="text" id="total-amount-id">0</span></div>
           </div>
         </div>
         <div>
-          <div class="reset-button"><button class="reset-box">RESET</button></div>
+          <div class="reset-button"><button class="reset-box" onClick="reset()">RESET</button></div>
         </div>
       </div>
     </div>
+    <script src="./script.js"></script>
   </body>
 </html>
